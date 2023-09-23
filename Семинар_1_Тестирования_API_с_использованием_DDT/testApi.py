@@ -13,8 +13,9 @@ def test_rest(user_login):
 
 
 def test_newpost(user_login):
-    n=S.post(address2, headers={'X-Auth-Token': user_login},
-           data={'title': 'Новый пост',
-                 'description': 'Post запрос',
-                 'content': 'текст поста'})
+    n = S.post(address2, headers={'X-Auth-Token': user_login},
+               data={'title': 'Новый пост',
+                     'description': 'Post запрос',
+                     'content': 'текст поста'})
     return n.json()
+
